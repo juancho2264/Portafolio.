@@ -1,33 +1,52 @@
 <!DOCTYPE html>
+<!-- 
+  ES: Define el idioma del documento como español y habilita el desplazamiento suave.
+  EN: Defines the document language as Spanish and enables smooth scrolling.
+-->
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Cruz Ferrandini | Portafolio</title>
     
-    <!-- Tailwind CSS -->
+    <!-- 
+      ES: Carga de librerías y hojas de estilo externas.
+      EN: Loading external libraries and stylesheets.
+    -->
+    
+    <!-- Tailwind CSS - Framework de CSS para un diseño rápido y responsivo. -->
+    <!-- Tailwind CSS - A utility-first CSS framework for rapid, responsive design. -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Poppins -->
+    <!-- Google Fonts: Poppins - Importa la fuente Poppins desde Google Fonts. -->
+    <!-- Google Fonts: Poppins - Imports the Poppins font from Google Fonts. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- AOS (Animate On Scroll) Library -->
+    <!-- AOS (Animate On Scroll) Library - Para animaciones que se activan al hacer scroll. -->
+    <!-- AOS (Animate On Scroll) Library - For animations that trigger on scroll. -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Feather Icons -->
+    <!-- Feather Icons - Librería de iconos SVG ligeros y personalizables. -->
+    <!-- Feather Icons - A library of lightweight and customizable SVG icons. -->
     <script src="https://unpkg.com/feather-icons"></script>
 
     <style>
-        /* Custom styles to apply the Poppins font */
+        /* ES: Estilos personalizados para complementar Tailwind CSS.
+          EN: Custom styles to complement Tailwind CSS.
+        */
+
+        /* ES: Aplica la fuente Poppins al cuerpo del documento y define colores base. */
+        /* EN: Applies the Poppins font to the document body and defines base colors. */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #111827; /* bg-gray-900 */
             color: #F3F4F6; /* text-gray-200 */
         }
         
-        /* Text Reveal Animation */
+        /* ES: Animación para revelar el texto del título letra por letra. */
+        /* EN: Animation to reveal the title text letter by letter. */
         .title-char {
             display: inline-block;
             opacity: 0;
@@ -41,7 +60,8 @@
             }
         }
 
-        /* Custom gradient for text */
+        /* ES: Estilo para crear un texto con un degradado de color. */
+        /* EN: Style to create text with a color gradient. */
         .text-gradient {
             background: linear-gradient(90deg, #38bdf8, #4f46e5);
             -webkit-background-clip: text;
@@ -49,14 +69,16 @@
             background-clip: text;
         }
         
-        /* Glassmorphism effect for cards */
+        /* ES: Efecto "Glassmorphism" para las tarjetas, creando un aspecto de vidrio esmerilado. */
+        /* EN: "Glassmorphism" effect for cards, creating a frosted glass look. */
         .glass-card {
             background: rgba(31, 41, 55, 0.5); /* bg-gray-800 with opacity */
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Scrollbar styling */
+        /* ES: Estilos personalizados para la barra de desplazamiento del navegador. */
+        /* EN: Custom styles for the browser's scrollbar. */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -71,7 +93,8 @@
             background: #38bdf8;
         }
 
-        /* Tooltip for copy button */
+        /* ES: Estilos para el tooltip (mensaje emergente) del botón de copiar. */
+        /* EN: Styles for the tooltip of the copy button. */
         .tooltip {
             position: relative;
             display: inline-block;
@@ -110,12 +133,22 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- Particle.js container -->
+    <!-- 
+      ES: Contenedor para la animación de partículas en el fondo. Se posiciona de forma fija detrás de todo el contenido.
+      EN: Container for the particle animation in the background. It is positioned fixed behind all content.
+    -->
     <div id="particles-js" class="fixed inset-0 z-0"></div>
 
+    <!-- 
+      ES: Contenedor principal que se superpone a las partículas para todo el contenido visible.
+      EN: Main container that overlays the particles for all visible content.
+    -->
     <div class="relative z-10">
 
-        <!-- Header / Hero Section -->
+        <!-- 
+          ES: Sección de cabecera (Hero). Ocupa toda la pantalla inicial.
+          EN: Header (Hero) Section. Occupies the entire initial screen.
+        -->
         <header id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-4">
             <h1 id="main-title" class="text-4xl md:text-6xl font-bold mb-2"></h1>
             <p data-aos="fade-up" data-aos-delay="1200" class="text-lg md:text-2xl text-sky-400">Técnico Electrónico | Estudiante de Gestión de la Informática</p>
@@ -126,7 +159,10 @@
 
         <main class="container mx-auto px-6 md:px-12">
 
-            <!-- About Me Section -->
+            <!-- 
+              ES: Sección "Sobre mí" o "Perfil Profesional".
+              EN: "About Me" or "Professional Profile" Section.
+            -->
             <section id="sobre-mi" class="py-20">
                 <h2 data-aos="fade-right" class="text-3xl font-bold mb-8 text-center text-gradient">Perfil Profesional</h2>
                 <div data-aos="zoom-in-up" class="glass-card rounded-xl p-8 max-w-4xl mx-auto text-center leading-relaxed">
@@ -139,12 +175,16 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
+            <!-- 
+              ES: Sección de Habilidades (Skills).
+              EN: Skills Section.
+            -->
             <section id="skills" class="py-20">
                 <h2 data-aos="fade-left" class="text-3xl font-bold mb-12 text-center text-gradient">Habilidades</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Programming Skills -->
+                    <!-- ES: Tarjeta de habilidades de programación. -->
+                    <!-- EN: Programming skills card. -->
                     <div data-aos="fade-up" class="glass-card rounded-xl p-6 text-center transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="inline-block p-4 bg-sky-500/20 rounded-full mb-4 border border-sky-500">
                             <i data-feather="code" class="w-8 h-8 text-sky-400"></i>
@@ -158,20 +198,22 @@
                         </ul>
                     </div>
 
-                    <!-- Technical Skills -->
+                    <!-- ES: Tarjeta de habilidades técnicas. -->
+                    <!-- EN: Technical skills card. -->
                     <div data-aos="fade-up" data-aos-delay="200" class="glass-card rounded-xl p-6 text-center transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="inline-block p-4 bg-indigo-500/20 rounded-full mb-4 border border-indigo-500">
                             <i data-feather="cpu" class="w-8 h-8 text-indigo-400"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Técnicas</h3>
                         <ul class="text-gray-400">
-                            <li>Soluciones Hardware</li>
-                            <li>Firmware</li>
-                            <li>Resolución de Problemas</li>
+                            <li>Diagnóstico de Fallas</li>
+                            <li>Mantenimiento de Equipos</li>
+                            <li>Soporte Técnico</li>
                         </ul>
                     </div>
 
-                    <!-- Soft Skills -->
+                    <!-- ES: Tarjeta de habilidades blandas (Soft Skills). -->
+                    <!-- EN: Soft skills card. -->
                     <div data-aos="fade-up" data-aos-delay="400" class="glass-card rounded-xl p-6 text-center transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="inline-block p-4 bg-emerald-500/20 rounded-full mb-4 border border-emerald-500">
                             <i data-feather="users" class="w-8 h-8 text-emerald-400"></i>
@@ -187,12 +229,16 @@
                 </div>
             </section>
 
-            <!-- Education & Experience Section -->
+            <!-- 
+              ES: Sección de Trayectoria (Educación y Experiencia).
+              EN: Journey Section (Education & Experience).
+            -->
             <section id="journey" class="py-20">
                  <h2 data-aos="fade-right" class="text-3xl font-bold mb-12 text-center text-gradient">Mi Trayectoria</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                     
-                    <!-- Education Column -->
+                    <!-- ES: Columna de Educación. -->
+                    <!-- EN: Education Column. -->
                     <div data-aos="fade-right" data-aos-delay="200">
                         <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i data-feather="book-open" class="text-sky-400"></i> Educación</h3>
                         <div class="relative border-l-2 border-sky-500/50 pl-8 space-y-10">
@@ -211,39 +257,43 @@
                         </div>
                     </div>
 
-                    <!-- Experience Column -->
+                    <!-- ES: Columna de Experiencia Laboral. -->
+                    <!-- EN: Work Experience Column. -->
                     <div data-aos="fade-left" data-aos-delay="400">
                         <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i data-feather="briefcase" class="text-indigo-400"></i> Experiencia Laboral</h3>
                         <div class="relative border-l-2 border-indigo-500/50 pl-8 space-y-10">
-                            <!-- Job 1 -->
                             <div class="absolute w-4 h-4 bg-indigo-400 rounded-full -left-2 top-1"></div>
                             <div class="transform hover:scale-105 transition-transform duration-300">
                                 <h4 class="font-bold text-lg">Sacabocados W.A.N</h4>
-                                <p class="text-sm text-gray-400 italic">
-                                    2023-2024
+                                <p class="text-sm text-gray-400 italic mb-2">
+                                    Participé en la fabricación de troqueles rotativos, asegurando la calidad y precisión de los componentes.
                                 </p>
+                                <p class="text-xs text-gray-500">2023 - 2024</p>
                             </div>
-                            <!-- Job 2 -->
                             <div class="absolute w-4 h-4 bg-indigo-400 rounded-full -left-2"></div>
                             <div class="transform hover:scale-105 transition-transform duration-300">
                                 <h4 class="font-bold text-lg">Green Box 'Envases Corrugado'</h4>
-                                <p class="text-sm text-gray-400 italic">
-                                    2024-2025
+                                <p class="text-sm text-gray-400 italic mb-2">
+                                    Operé en la línea de producción de cajas de cartón, cumpliendo con los objetivos diarios del equipo.
                                 </p>
+                                <p class="text-xs text-gray-500">2024 - 2025</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Contact Section -->
+            <!-- 
+              ES: Sección de Contacto.
+              EN: Contact Section.
+            -->
             <section id="contact" class="py-20 text-center">
                 <h2 data-aos="zoom-in" class="text-3xl font-bold text-gradient mb-4">¿Hablamos?</h2>
                 <p data-aos="zoom-in" data-aos-delay="100" class="text-gray-400 mb-8 max-w-lg mx-auto">Estoy abierto a nuevas oportunidades y desafíos. Si crees que mi perfil encaja en tu equipo, no dudes en contactarme.</p>
                 <div data-aos="zoom-in" data-aos-delay="200" class="flex justify-center items-center gap-4 md:gap-6">
                     <div id="email-container" class="tooltip flex items-center gap-2 bg-gray-800 py-2 px-4 rounded-lg">
                         <i data-feather="mail" class="text-gray-400"></i>
-                        <span id="email-text" class="text-white">juanchoferrandini3@gmail.com</span>
+                        <span id="email-text" class="text-white">ferrandinijuancruz@gmail.com</span>
                         <button id="copy-button" class="ml-2 text-gray-400 hover:text-sky-400 transition-colors">
                             <i data-feather="copy" class="w-5 h-5"></i>
                         </button>
@@ -257,48 +307,59 @@
             </section>
         </main>
 
-        <!-- Footer -->
+        <!-- 
+          ES: Pie de página.
+          EN: Footer.
+        -->
         <footer class="text-center py-6 border-t border-gray-800">
             <p class="text-gray-500 text-sm">&copy; 2025 Juan Cruz Ferrandini. Todos los derechos reservados.</p>
         </footer>
 
     </div>
 
-    <!-- Scripts -->
+    <!-- 
+      ES: Carga de scripts de JavaScript al final del body para un mejor rendimiento.
+      EN: Loading JavaScript scripts at the end of the body for better performance.
+    -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        // Initialize Feather Icons
+        // ES: Inicializa la librería Feather Icons para reemplazar las etiquetas <i> por SVGs.
+        // EN: Initializes the Feather Icons library to replace <i> tags with SVGs.
         feather.replace();
 
-        // Initialize AOS to trigger animations on every scroll
+        // ES: Inicializa la librería AOS (Animate On Scroll).
+        // EN: Initializes the AOS (Animate On Scroll) library.
         AOS.init({
-            duration: 600, // Animation speed set to be faster
-            once: false,
+            duration: 600, // ES: Duración de la animación en milisegundos. | EN: Animation duration in milliseconds.
+            once: false,   // ES: La animación se repite cada vez que el elemento es visible. | EN: The animation repeats every time the element is visible.
         });
 
-        // --- Text Reveal Animation ---
+        // --- ES: Animación para revelar el título ---
+        // --- EN: Text Reveal Animation for the title ---
         document.addEventListener('DOMContentLoaded', () => {
             const title = "Juan Cruz Ferrandini";
             const titleContainer = document.getElementById('main-title');
             title.split('').forEach((char, index) => {
                 const span = document.createElement('span');
-                span.textContent = char === ' ' ? '\u00A0' : char; // Use non-breaking space
+                span.textContent = char === ' ' ? '\u00A0' : char; // ES: Usa un espacio sin ruptura para mantener los espacios. | EN: Uses a non-breaking space to maintain spaces.
                 span.className = 'title-char';
-                span.style.animationDelay = `${index * 0.05}s`;
+                span.style.animationDelay = `${index * 0.05}s`; // ES: Retraso escalonado para cada letra. | EN: Staggered delay for each letter.
                 titleContainer.appendChild(span);
             });
         });
 
-        // --- Copy to Clipboard Logic ---
+        // --- ES: Lógica para copiar el email al portapapeles ---
+        // --- EN: Logic to copy the email to the clipboard ---
         const copyButton = document.getElementById('copy-button');
         const emailText = document.getElementById('email-text').innerText;
         const tooltipContainer = document.getElementById('email-container');
         const tooltipText = document.getElementById('tooltip-text');
 
         copyButton.addEventListener('click', () => {
-            // Use a temporary textarea to securely copy the text
+            // ES: Crea un textarea temporal para copiar el texto de forma segura.
+            // EN: Creates a temporary textarea to securely copy the text.
             const tempTextArea = document.createElement('textarea');
             tempTextArea.value = emailText;
             document.body.appendChild(tempTextArea);
@@ -306,11 +367,13 @@
             document.execCommand('copy');
             document.body.removeChild(tempTextArea);
 
-            // Show feedback tooltip
+            // ES: Muestra el tooltip de confirmación.
+            // EN: Shows the confirmation tooltip.
             tooltipText.innerText = '¡Copiado!';
             tooltipContainer.classList.add('show');
             
-            // Revert tooltip text after a delay
+            // ES: Revierte el texto del tooltip después de 2 segundos.
+            // EN: Reverts the tooltip text after 2 seconds.
             setTimeout(() => {
                 tooltipContainer.classList.remove('show');
                 setTimeout(() => {
@@ -319,9 +382,14 @@
             }, 2000);
         });
         
+        // ES: Muestra el tooltip cuando el cursor pasa sobre el botón.
+        // EN: Shows the tooltip when the cursor hovers over the button.
         copyButton.addEventListener('mouseenter', () => {
              tooltipContainer.classList.add('show');
         });
+
+        // ES: Oculta el tooltip cuando el cursor sale, solo si no se ha copiado el texto.
+        // EN: Hides the tooltip when the cursor leaves, only if the text has not been copied.
         copyButton.addEventListener('mouseleave', () => {
             if (tooltipText.innerText === 'Copiar al portapapeles') {
                 tooltipContainer.classList.remove('show');
@@ -329,7 +397,8 @@
         });
 
 
-        // Initialize Particles.js
+        // --- ES: Inicialización y configuración de Particles.js para el fondo animado ---
+        // --- EN: Initialization and configuration of Particles.js for the animated background ---
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
